@@ -1,0 +1,23 @@
+@import '../../config';
+
+header {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 90px;
+  background-color: $third-color;
+  align-items: center;
+}
+
+.categories {
+  h3 {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 1rem 1rem;
+    font-weight: 300;
+  }
+}
+
+h1 {
+  font-weight: 700;
+}
