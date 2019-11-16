@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './retailer/header/header.component';
 import { RetailerComponent } from './retailer/retailer.component';
 import { SeenonmeComponent } from './seenonme/seenonme.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RetailerComponent,
-    SeenonmeComponent
+    SeenonmeComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
