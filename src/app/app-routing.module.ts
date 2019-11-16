@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RetailerComponent } from './retailer/retailer.component';
 import { SeenonmeComponent } from './seenonme/seenonme.component';
+import { BrowseItemsComponent } from './retailer/browse-items/browse-items.component';
+import { OrderHistoryComponent } from './retailer/order-history/order-history.component';
 
 
 const routes: Routes = [
-  { path: 'retailer', component: RetailerComponent},
+  { path: 'retailer', component: BrowseItemsComponent},
+  { path: 'account', component: OrderHistoryComponent},
   { path: 'seenonme', component: SeenonmeComponent},
-  { path: '**', component:  RetailerComponent}
+  { path: '**', redirectTo: '/retailer'}
 ];
 
 @NgModule({

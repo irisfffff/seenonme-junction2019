@@ -5,20 +5,11 @@ $theme-bg: #303C6C;
 $theme-primary: #FFB90B;
 $theme-secondary: #D2FDFF;
 
+
+$main-font: 'Roboto Condensed', sans-serif;
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.font-regular {
-  font-weight: 400;
-}
-
-.font-bold {
-  font-weight: 700;
 }

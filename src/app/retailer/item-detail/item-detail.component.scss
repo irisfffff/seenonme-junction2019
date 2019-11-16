@@ -1,0 +1,65 @@
+@import '../../config';
+
+.item-detail {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  background-color: #fff;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80vh auto;
+}
+
+.back-icon {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.text-detail {
+  grid-column: 2 / 3;
+  padding: 4rem 5rem 4rem 3rem;
+
+  .retailer-selector{
+    font-family: $main-font;
+    border-radius: 0%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-image:url(../../../assets/icons/arrow-down.svg);
+    background-size: 25% 25%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid $primary-color;
+    font-size: 1rem;
+
+    padding: 0.3rem 2rem 0.3rem 0;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    width: 120px;
+  }
+}
+
+.top-photo {
+  overflow: scroll;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+}
+
+img {
+  object-fit: cover;
+  width: 50vw;
+}
+

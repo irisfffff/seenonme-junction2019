@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/config';
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $primary-color;
+
+  font-family: $main-font;
+}
+
+a {
+  color: $theme-primary;
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+}
