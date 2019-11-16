@@ -11,18 +11,21 @@ import { FormsModule } from '@angular/forms';
 import { ConsumerComponent } from './seenonme/consumer/consumer.component';
 import { ReviewComponent } from './seenonme/review/review.component';
 import { OrderHistoryComponent } from './retailer/order-history/order-history.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SeenonmeComponent,
+    HttpClientModule,
+    SeenonmeComponent,
     BrowseItemsComponent,
     ItemDetailComponent,
     ConsumerComponent,
     ReviewComponent,
     OrderHistoryComponent
-  ],
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule,

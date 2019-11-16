@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Item } from 'src/app/models/item';
+import {Item} from '../../models/item';
 
 @Component({
   selector: 'app-item-detail',
@@ -19,7 +19,7 @@ export class ItemDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
   turnBack() {
