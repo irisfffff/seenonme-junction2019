@@ -1,0 +1,53 @@
+.content {
+  width: 100%;
+  padding: 3rem 6rem;
+  box-sizing: border-box;
+  position: relative;
+
+  .center {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  hr {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+@import '../../config';
+
+.order {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 0;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .order-info {
+    text-align: left;
+  }
+
+  button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: $main-font;
+    color: $primary-color;
+    border-radius: 0;
+    border: 1px solid $third-color;
+    background-color: $secondary-color;
+    margin: 0.5rem 0;
+  }
+}

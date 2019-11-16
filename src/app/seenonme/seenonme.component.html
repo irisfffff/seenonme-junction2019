@@ -1,1 +1,44 @@
-<p>seenonme works!</p>
+<div class="left">
+  <img class="logo" src="assets/icons/logo.svg" alt="">
+</div>
+<div class="right">
+  <ng-container *ngIf="uploaded === false else success">
+    <h1 class="font-regular">Share review and get reward!</h1>
+    <p class="font-light">Description, how it works, blahblah. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h2 class="font-bold">Your measurements:</h2>
+    <h3 class="font-light">Height(cm)</h3>
+    <input type="number" min="1" max="250">
+    <h3 class="font-light">Waist(cm)</h3>
+    <input type="number" min="1" max="250">
+  
+    <h2 class="font-bold">Seen on me:</h2>
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+  
+    <h2 class="font-bold">How do you like it?</h2>
+    <div class="rating">
+      <img src="assets/icons/star-empty.svg" alt="" class="star">
+      <img src="assets/icons/star-empty.svg" alt="" class="star">
+      <img src="assets/icons/star-empty.svg" alt="" class="star">
+      <img src="assets/icons/star-empty.svg" alt="" class="star">
+      <img src="assets/icons/star-empty.svg" alt="" class="star">
+  
+    </div>
+  
+    <h2 class="font-bold">Write something:</h2>
+    <input type="text" name="review" id="review">
+
+    <button class="submit" (click)="submit()">SUBMIT</button>
+  </ng-container>
+
+  <ng-template #success>
+    <h1 class="font-regular">Congratulations! We have successfully received your review 🎉<br>Save this code and you can get 10% discount for your next purchase!</h1>
+    <div class="center"><h1 class="font-bold coupon">GR36BZ</h1></div>
+    <h2 class="font-bold">Send it to my email address</h2>
+    <input type="email" name="email">
+    <button class="confirm">OK</button>
+    <button class="return" routerLink="/retailer">Return to retailer's website</button>
+  </ng-template>
+  
+</div>

@@ -1,0 +1,34 @@
+.content {
+  position: relative;
+}
+
+.items {
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.item {
+  display: inline-block;
+  width: 315px;
+  position: relative;
+  margin: 0.5rem 0.5rem;
+
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+  
+  .brief-info {
+    width: 100%;
+  }
+}
+
+.item-detail {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+

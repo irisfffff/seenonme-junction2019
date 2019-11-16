@@ -1,0 +1,24 @@
+<div class="item-detail">
+  <img class="back-icon" (click)="turnBack()" src="assets/icons/back.svg" alt="">
+  <div class="top-photo">
+    <img src="{{item.imgs[0]}}" alt="">
+  </div>
+  <div class="text-detail">
+    <h1 class="font-regular">{{item.name}}</h1>
+    <h3 class="font-bold">{{item.price + '€'}}</h3>
+    <select [(ngModel)]="selectedColor" class="retailer-selector font-light" name="item-color" id="color">
+      <option [value]="'unselected'">Select Color</option>
+      <option *ngFor="let x of item.colors" [value]="x">{{x}}</option>
+    </select><br>
+    <select [(ngModel)]="selectedSize" class="retailer-selector font-light" name="item-size" id="size">
+      <option [value]="'unselected'">Select Size</option>
+      <option *ngFor="let x of item.sizes" [value]="x">{{x}}</option>
+    </select><br>
+    
+    <a (click)="displaySeenOnMe()">#SeenOnMe</a>
+    <p class="font-light">{{item.description}}</p>
+  </div>
+  <img src="{{item.imgs[0]}}" alt="">
+  <img src="{{item.imgs[0]}}" alt="">
+  <app-consumer *ngIf="seenOnMe" [sizes]="item.sizes" [selectedSize]="selectedSize" (closeEvent)="closeSeenOnMe($event)"></app-consumer>
+</div>

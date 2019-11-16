@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="content">
+  <div class="items">
+    <div *ngFor="let item of items" class="item" (click)="selectItem(item)">
+      <img src="{{item.imgs[0]}}" alt="">
+      <div class="brief-info">
+        <span>{{item.name}}</span><br>
+        <span>{{item.price + '€'}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="item-detail" *ngIf="selectedItem != null">
+    <app-item-detail [item]="selectedItem" (backEvent)="deselectItem($event)"></app-item-detail>
+  </div>
+</div>
+

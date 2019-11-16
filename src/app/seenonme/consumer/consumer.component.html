@@ -1,0 +1,13 @@
+<div class="overlay"></div>
+<div class="widget">
+  <div class="widget-header">
+    <img class="close-icon" (click)="closeSeenOnMe()" src="assets/icons/close.svg" alt="">
+    <select [(ngModel)]="selectedSize" class="retailer-selector font-light" name="item-color" id="color">
+      <option [value]="'unselected'">Select Size</option>
+      <option *ngFor="let x of sizes" [value]="x">{{x}}</option>
+    </select><br>
+  </div>
+  <div class="reviews">
+    <app-review></app-review>
+  </div>
+</div>
