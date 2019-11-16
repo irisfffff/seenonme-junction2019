@@ -1,0 +1,8 @@
+@import 'config';
+
+$main-font: 'Roboto Condensed', sans-serif;
+
+.content {
+  font-family: $main-font;
+  min-height: 100vh;
+}
