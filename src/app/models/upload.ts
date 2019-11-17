@@ -8,5 +8,5 @@ export class Upload {
   // product_id: string;
   order_id: string;
   size: number;
-  supplier_id: string;
+  supplier_id: number;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ORDERS } from '../../models/mock-orders';
 import { Order } from 'app/models/order';
+import { UploadService } from 'app/shared/upload.service';
 
 @Component({
   selector: 'app-order-history',
@@ -10,14 +11,28 @@ import { Order } from 'app/models/order';
 })
 export class OrderHistoryComponent implements OnInit {
   orders: Order[] = ORDERS;
+  orderItem = {
+    product_id: null,
+    size: null
+  };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private uploadService: UploadService) { }
 
   ngOnInit() {
   }
 
-  goToSeenOnMe(order_id: string, product_id: string): void {
-    this.router.navigate(['/seenonme'], {state: {data: {order_id, product_id}}});
+  goToSeenOnMe(order_id: string): void {
+    if(this.orderItem.product_id === null || this.orderItem.size === null) {
+      return;
+    }
+    
+    this.uploadService.setOrderDetail(order_id, this.orderItem.product_id, this.orderItem.size)
+    this.router.navigate(['/seenonme']);
+  }
+
+  selectItem(product_id: string, size: number) {
+    this.orderItem.product_id = product_id;
+    this.orderItem.size = size;
   }
 
 }

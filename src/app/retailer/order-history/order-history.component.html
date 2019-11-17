@@ -11,10 +11,13 @@
           <p>Date ordered: {{order.date}}</p>
           <p>Order status: {{order.status}}</p>
           <p>Order id: {{order.id}}</p>
+          <button>Order Details</button>
         </div>
         <div>
-          <button>Order Details</button>
-          <button routerLink="/seenonme" class="seenonme">#SeenOnMe</button>
+          <label *ngFor="let item of order.products; let idx = index">
+            <input class="font-light" type="radio" name="mode" (change)="selectItem(item, order.sizes[idx])">{{item + " - " + order.sizes[idx]}} <br>
+          </label>
+          <button (click)="goToSeenOnMe(order.id)" class="seenonme">#SeenOnMe</button>
         </div>
       </div>
       <hr>

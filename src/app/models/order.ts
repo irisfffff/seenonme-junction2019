@@ -4,4 +4,5 @@ export class Order {
   image: string;
   date: string;
   status: string;
+  sizes: Array<number>;
 }
