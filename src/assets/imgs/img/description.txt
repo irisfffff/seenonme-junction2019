@@ -1,0 +1,119 @@
+1.)
+https://www.zalando.co.uk/noisy-may-nmzoe-coat-classic-coat-nm321u013-c11.html
+id: NM321U013-C11
+name: NMZOE - Classic coat
+price: 89.99 
+description:
+
+MATERIAL & CARE
+Outer fabric material: 50% wool, 50% polyester
+Lining: 100% polyester
+
+imgs: 1gray_coat.png
+colors: dark grey
+sizes: M
+
+2.)
+https://www.zalando.co.uk/mango-lisi-classic-coat-m9121u0l6-b11.html 
+id:M9121U0L6-B11
+name:LISI - Classic coat
+price:99.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 55% polyester, 25% wool, 20% viscose
+Lining: 55% polyester, 45% viscose
+
+imgs:2brown_coat.png
+colors:caramel
+sizes: M
+
+3.)
+https://www.zalando.co.uk/mintandberry-classic-coat-khaki-m3221u015-n11.html 
+id:M3221U015-N11
+name:Classic coat
+price:114.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 55% polyester, 30% wool, 6% acrylic, 5% viscose, 3% nylon, 1% cotton
+Lining: 100% polyester
+Care instructions: Do not tumble dry, machine wash at 30°C, Machine wash on gentle cycle
+
+imgs:3khaki_coat.png
+colors:khaki
+sizes: M
+
+4.)
+https://www.zalando.co.uk/anna-field-classic-coat-black-an621u00a-q11.html
+id:AN621U00A-Q11
+name:Black classic coat
+price:79.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 49% acrylic, 47% polyester, 4% wool
+Lining: 100% polyester
+Care instructions: Dry clean only
+
+imgs:4black_coat.png
+colors:black
+sizes: M
+
+5.)
+https://www.zalando.co.uk/kaffe-amber-blouse-ka321e0c7-q11.html
+id:KA321E0C7-Q11
+name:AMBER BLOUSE - Tunic
+price:25.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 100% viscose
+Care instructions: Machine wash at 40°C, do not tumble dry, Machine wash on gentle cycle
+
+imgs:5gray_blouse.png
+colors:smoked pearl
+sizes: 42
+
+6.)
+id:M3I21E0EQ-G11
+name:Button-down blouse
+price:45.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 100% viscose
+Care instructions: Machine wash at 40°C, do not tumble dry, Machine wash on gentle cycle
+
+imgs:6red.png
+colors:red
+sizes: 42
+
+
+7.)
+id: M3I21I09E-K11
+name:Cardigan
+price:55.99
+description:
+
+MATERIAL & CARE
+Outer fabric material: 47% wool, 30% viscose, 19% polyamide, 4% cashmere
+
+imgs:7cardigan.png
+colors:dark blue
+sizes: 42
+
+8.)
+id: 0723295002
+name:Biker Jacket
+price:19.99
+description:
+
+MATERIAL & CARE
+Viscose 100%Coating: Polyurethane 100%Lining: Polyester 100%
+
+imgs:8jacket.png
+colors:black
+sizes: 42
+
+
