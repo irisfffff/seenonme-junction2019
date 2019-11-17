@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
 import {Review} from './review';
@@ -10,18 +10,30 @@ import {Review} from './review';
 export class RestApiService {
 
   // Define API
-  apiURL = 'http://localhost:3000';
+  apiURL = 'https://commerce-259209.appspot.com';
 
   constructor(private http: HttpClient) { }
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
     })
   };
 
-  getReviews(): Observable<any> {
-    return this.http.get<Review>(this.apiURL + '/reviews')
+  getReviews(id: string, height?: number, waist?: number, size?: number): Observable<any> {
+    let params = {
+      merchant_id: id
+    }
+    if (height) {
+      params['height'] = height;
+    }
+    if (waist) {
+      params['waist'] = waist;
+    }
+    if (size && size != -1) {
+      params['size'] = size;
+    }
+    
+    return this.http.get<Review>(this.apiURL + '/reviews', {params})
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -29,7 +41,7 @@ export class RestApiService {
   }
 
   createReview(review): Observable<any> {
-    return this.http.post<Review>(this.apiURL + '/upload', JSON.stringify(review), this.httpOptions)
+    return this.http.put(this.apiURL + '/upload', review, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)

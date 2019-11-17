@@ -11,7 +11,7 @@
       <option *ngFor="let x of item.colors" [value]="x">{{x}}</option>
     </select><br>
     <select [(ngModel)]="selectedSize" class="retailer-selector font-light" name="item-size" id="size">
-      <option [value]="'unselected'">Select Size</option>
+      <option [value]="-1">Select Size</option>
       <option *ngFor="let x of item.sizes" [value]="x">{{x}}</option>
     </select><br>
     
@@ -20,5 +20,5 @@
   </div>
   <img src="{{item.imgs[0]}}" alt="">
   <img src="{{item.imgs[0]}}" alt="">
-  <app-consumer *ngIf="seenOnMe" [sizes]="item.sizes" [selectedSize]="selectedSize" (closeEvent)="closeSeenOnMe($event)"></app-consumer>
+  <app-consumer *ngIf="seenOnMe" [merchantId]="item.id" [sizes]="item.sizes" [selectedSize]="selectedSize" (closeEvent)="closeSeenOnMe($event)"></app-consumer>
 </div>

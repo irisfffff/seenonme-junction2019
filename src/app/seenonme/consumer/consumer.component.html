@@ -2,12 +2,25 @@
 <div class="widget">
   <div class="widget-header">
     <img class="close-icon" (click)="closeSeenOnMe()" src="assets/icons/close.svg" alt="">
-    <select [(ngModel)]="selectedSize" class="retailer-selector font-light" name="item-color" id="color">
-      <option [value]="'unselected'">Select Size</option>
+    <select [(ngModel)]="selectedSize" (change)="getReviews()" class="size-selector font-light" name="item-color" id="color">
+      <option [value]="-1">Select Size</option>
       <option *ngFor="let x of sizes" [value]="x">{{x}}</option>
     </select><br>
+    <button class="feature-selector font-light" (click)="toggleFeatures()">Features</button>
+    <div class="features" *ngIf="displayFeatures">
+      <div>
+        <h3 class="font-light">Height(cm)</h3>
+        <input type="number" min="1" max="250" [(ngModel)]="height" (change)="getReviews()">
+      </div>
+      <div>
+        <h3 class="font-light">Waist(cm)</h3>
+        <input type="number" min="1" max="250" [(ngModel)]="waist" (change)="getReviews()">
+      </div>
+    </div>
   </div>
   <div class="reviews">
-    <app-review></app-review>
+    <!-- <app-review [review]="mockReviews[0]"></app-review> -->
+    <app-review *ngFor="let review of reviews" [review]="review"></app-review>
   </div>
+  
 </div>

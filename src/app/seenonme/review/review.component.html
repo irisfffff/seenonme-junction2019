@@ -1,7 +1,11 @@
 <div class="review">
-  <img src="assets/imgs/cloth.png" alt="">
-  <div class="rating"></div>
+  <img src="{{review.image}}" alt="">
+  <div class="rating">
+    <img *ngFor="let i of genArray(review.rating)" src="assets/icons/star-filled.svg" alt="" class="star">
+    <img *ngFor="let i of genArray(5 - review.rating)" src="assets/icons/star-empty.svg" alt="" class="star">
+
+  </div>
   <div class="comment font-light">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos obcaecati itaque consequatur veritatis repellendus officiis corrupti odio mollitia laborum eos quo omnis praesentium dolorum voluptatem dolorem laudantium, dignissimos perspiciatis!
+    {{review.description}}
   </div>
 </div>

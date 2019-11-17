@@ -4,31 +4,19 @@
   <p class="font-light">Here you can view and track the status of your orders and write reviews on SeenOnMe to get a voucher for your next order!</p>
   <div class="center">
     <hr>
-    <div class="order">
-      <img src="assets/imgs/cloth.png" alt="">
-      <div class="order-info font-light">
-        <p>Date ordered: 9/27/19</p>
-        <p>Order status: Shipped</p>
-        <p>Order number: 0745379760</p>
-      </div>
-      <div>
-        <button>Order Details</button>
-        <button routerLink="/seenonme">SeenOnMe</button>
-      </div>
-    </div>
-    <hr>
-    <div class="order">
-        <img src="assets/imgs/cloth.png" alt="">
+    <ng-container *ngFor="let order of orders">
+      <div class="order">
+        <img src="{{order.image}}" alt="">
         <div class="order-info font-light">
-          <p>Date ordered: 9/27/19</p>
-          <p>Order status: Shipped</p>
-          <p>Order number: 0745379760</p>
+          <p>Date ordered: {{order.date}}</p>
+          <p>Order status: {{order.status}}</p>
+          <p>Order id: {{order.id}}</p>
         </div>
         <div>
           <button>Order Details</button>
-          <button>SeenOnMe</button>
+          <button routerLink="/seenonme" class="seenonme">#SeenOnMe</button>
         </div>
       </div>
       <hr>
-  </div>  
+    </ng-container>
 </div>

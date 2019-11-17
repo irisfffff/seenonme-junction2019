@@ -42,10 +42,80 @@
     width: 1rem;
     height: 1rem;
   }
+
+  .size-selector, .feature-selector{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-family: $main-font;
+    border-radius: 0%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: $secondary-color;
+    background-color: $primary-color;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-image:url(../../../assets/icons/arrow-down-light.svg);
+    background-size: 25% 25%;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    width: 120px;
+  }
+
+  .feature-selector {
+    left: 10rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    width: 110px;
+  }
+
 }
 
 .reviews {
   position: relative;
-  top: 80px;
+  top: 60px;
+}
+
+.features {
+  padding: 1rem 1.5rem;
+  background-color: $secondary-color;
+  border: 1px solid $primary-color;
+  position: absolute;
+  top: 4rem;
+  left: 6rem;
+  z-index: 10;
+
+  div {
+    h3, input[type=number] {
+      display: inline-block;
+    }
+  
+    input[type=number] { 
+      -moz-appearance: textfield;
+      appearance: textfield;
+      margin: 0; 
+      height: 1rem;
+      width: 80px;
+      border: 0px;
+      border-bottom: 1px solid $primary-color;
+      margin-right: 2rem;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+  }
 }
 

@@ -14,7 +14,7 @@ export class ItemDetailComponent implements OnInit {
   seenOnMe: boolean = false;
 
   selectedColor = 'unselected';
-  selectedSize = 'unselected';
+  selectedSize = -1;
 
   constructor() { }
 

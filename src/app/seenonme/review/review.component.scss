@@ -6,6 +6,12 @@ img {
   width: 100%;
 }
 
-.comment {
+.comment, .rating {
   margin: 0.5rem 1rem;
+}
+
+
+.star {
+  width: 1rem;
+  height: 1rem;
 }

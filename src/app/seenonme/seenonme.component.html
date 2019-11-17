@@ -7,27 +7,25 @@
     <p class="font-light">Description, how it works, blahblah. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <h2 class="font-bold">Your measurements:</h2>
     <h3 class="font-light">Height(cm)</h3>
-    <input type="number" min="1" max="250">
+    <input type="number" min="1" max="250" [(ngModel)]="uploadDetail.height">
     <h3 class="font-light">Waist(cm)</h3>
-    <input type="number" min="1" max="250">
+    <input type="number" min="1" max="250" [(ngModel)]="uploadDetail.waist">
   
     <h2 class="font-bold">Seen on me:</h2>
+    <input type="file" name="pic" accept="image/*" (change)="onFileChanged($event)">
+    <!-- <div class="picture"></div>
     <div class="picture"></div>
-    <div class="picture"></div>
-    <div class="picture"></div>
+    <div class="picture"></div> -->
   
     <h2 class="font-bold">How do you like it?</h2>
     <div class="rating">
-      <img src="assets/icons/star-empty.svg" alt="" class="star">
-      <img src="assets/icons/star-empty.svg" alt="" class="star">
-      <img src="assets/icons/star-empty.svg" alt="" class="star">
-      <img src="assets/icons/star-empty.svg" alt="" class="star">
-      <img src="assets/icons/star-empty.svg" alt="" class="star">
-  
+      <img *ngFor="let i of genArray(uploadDetail.rating); let idx = index" src="assets/icons/star-filled.svg" alt="" class="star" (click)="setRating(idx + 1)">
+      <img *ngFor="let i of genArray(5 - uploadDetail.rating); let idx = index" src="assets/icons/star-empty.svg" alt="" class="star" (click)="setRating(uploadDetail.rating + idx + 1)">
+
     </div>
   
     <h2 class="font-bold">Write something:</h2>
-    <input type="text" name="review" id="review">
+    <input type="text" name="review" id="review" [(ngModel)]="uploadDetail.desc">
 
     <button class="submit" (click)="submit()">SUBMIT</button>
   </ng-container>
